@@ -25,63 +25,74 @@ format = 1
 motion_mirroring = Vector2( 1440, 0 )
 
 [node name="Sprite" type="Sprite" parent="TileMap/ParallaxBackground/ParallaxLayer"]
+position = Vector2( 120, 68 )
 texture = ExtResource( 5 )
 
 [node name="ParallaxLayer11" type="ParallaxLayer" parent="TileMap/ParallaxBackground"]
 motion_mirroring = Vector2( 1440, 0 )
 
 [node name="Sprite" type="Sprite" parent="TileMap/ParallaxBackground/ParallaxLayer11"]
+position = Vector2( 120, 68 )
 texture = ExtResource( 10 )
 
 [node name="ParallaxLayer10" type="ParallaxLayer" parent="TileMap/ParallaxBackground"]
 motion_mirroring = Vector2( 1440, 0 )
 
 [node name="Sprite" type="Sprite" parent="TileMap/ParallaxBackground/ParallaxLayer10"]
+position = Vector2( 120, 68 )
 texture = ExtResource( 3 )
 
 [node name="ParallaxLayer9" type="ParallaxLayer" parent="TileMap/ParallaxBackground"]
 motion_mirroring = Vector2( 1440, 0 )
 
 [node name="Sprite" type="Sprite" parent="TileMap/ParallaxBackground/ParallaxLayer9"]
+position = Vector2( 120, 68 )
 texture = ExtResource( 2 )
 
 [node name="ParallaxLayer8" type="ParallaxLayer" parent="TileMap/ParallaxBackground"]
 motion_mirroring = Vector2( 1440, 0 )
 
 [node name="Sprite" type="Sprite" parent="TileMap/ParallaxBackground/ParallaxLayer8"]
+position = Vector2( 120, 68 )
 texture = ExtResource( 9 )
 
 [node name="ParallaxLayer7" type="ParallaxLayer" parent="TileMap/ParallaxBackground"]
 motion_mirroring = Vector2( 1440, 0 )
 
 [node name="Sprite" type="Sprite" parent="TileMap/ParallaxBackground/ParallaxLayer7"]
+position = Vector2( 120, 68 )
 texture = ExtResource( 12 )
 
 [node name="ParallaxLayer6" type="ParallaxLayer" parent="TileMap/ParallaxBackground"]
 
 [node name="Sprite" type="Sprite" parent="TileMap/ParallaxBackground/ParallaxLayer6"]
+position = Vector2( 120, 68 )
 texture = ExtResource( 11 )
 
 [node name="ParallaxLayer5" type="ParallaxLayer" parent="TileMap/ParallaxBackground"]
 motion_mirroring = Vector2( 1440, 0 )
 
 [node name="Sprite" type="Sprite" parent="TileMap/ParallaxBackground/ParallaxLayer5"]
+position = Vector2( 120, 68 )
 texture = ExtResource( 7 )
 
 [node name="ParallaxLayer4" type="ParallaxLayer" parent="TileMap/ParallaxBackground"]
 motion_mirroring = Vector2( 1440, 0 )
 
 [node name="Sprite" type="Sprite" parent="TileMap/ParallaxBackground/ParallaxLayer4"]
+position = Vector2( 120, 68 )
 texture = ExtResource( 8 )
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="TileMap/ParallaxBackground"]
 motion_mirroring = Vector2( 1440, 0 )
 
 [node name="Sprite" type="Sprite" parent="TileMap/ParallaxBackground/ParallaxLayer3"]
+position = Vector2( 120, 68 )
 texture = ExtResource( 4 )
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="TileMap/ParallaxBackground"]
 motion_mirroring = Vector2( 1440, 0 )
 
 [node name="Sprite" type="Sprite" parent="TileMap/ParallaxBackground/ParallaxLayer2"]
+position = Vector2( 120, 68 )
 texture = ExtResource( 6 )
