@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Scripts/Game.gd" type="Script" id=1]
 [ext_resource path="res://Desert Parallax by Cryptogene/8 Stars2.png" type="Texture" id=2]
@@ -15,8 +15,40 @@
 [ext_resource path="res://Sprites/icon.png" type="Texture" id=13]
 [ext_resource path="res://Player.gd" type="Script" id=14]
 [ext_resource path="res://Assests/DesertTileset/png/Tile/15.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/Desert Background Desert Layer 1.png" type="Texture" id=16]
+[ext_resource path="res://Assests/kenney_sketch-desert/Tiles/grass_slopeConvex_N.png" type="Texture" id=17]
 
-[sub_resource type="TileSet" id=2]
+[sub_resource type="TileSet" id=5]
+0/name = "Desert Background Desert Layer 1.png 0"
+0/texture = ExtResource( 16 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 512, 192 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
+[sub_resource type="TileSet" id=6]
+0/name = "grass_slopeConvex_N.png 0"
+0/texture = ExtResource( 17 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 128, 256, 224 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 31.0
@@ -52,23 +84,24 @@ points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 script = ExtResource( 1 )
 
 [node name="TileMap" type="TileMap" parent="."]
-tile_set = SubResource( 2 )
-cell_size = Vector2( 16, 16 )
+tile_set = SubResource( 5 )
+cell_size = Vector2( 500, 500 )
 format = 1
+tile_data = PoolIntArray( 131070, 0, 0, 131071, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="TileMap"]
 
-[node name="ParallaxLayer" type="ParallaxLayer" parent="TileMap/ParallaxBackground"]
+[node name="Cactus black" type="ParallaxLayer" parent="TileMap/ParallaxBackground"]
 motion_mirroring = Vector2( 1440, 0 )
 
-[node name="Sprite" type="Sprite" parent="TileMap/ParallaxBackground/ParallaxLayer"]
+[node name="Sprite" type="Sprite" parent="TileMap/ParallaxBackground/Cactus black"]
 position = Vector2( 120, 68 )
 texture = ExtResource( 5 )
 
-[node name="ParallaxLayer11" type="ParallaxLayer" parent="TileMap/ParallaxBackground"]
+[node name="Sky" type="ParallaxLayer" parent="TileMap/ParallaxBackground"]
 motion_mirroring = Vector2( 1440, 0 )
 
-[node name="Sprite" type="Sprite" parent="TileMap/ParallaxBackground/ParallaxLayer11"]
+[node name="Sprite" type="Sprite" parent="TileMap/ParallaxBackground/Sky"]
 position = Vector2( 120, 68 )
 texture = ExtResource( 10 )
 
@@ -79,10 +112,10 @@ motion_mirroring = Vector2( 1440, 0 )
 position = Vector2( 120, 68 )
 texture = ExtResource( 3 )
 
-[node name="ParallaxLayer9" type="ParallaxLayer" parent="TileMap/ParallaxBackground"]
+[node name="Stars" type="ParallaxLayer" parent="TileMap/ParallaxBackground"]
 motion_mirroring = Vector2( 1440, 0 )
 
-[node name="Sprite" type="Sprite" parent="TileMap/ParallaxBackground/ParallaxLayer9"]
+[node name="Sprite" type="Sprite" parent="TileMap/ParallaxBackground/Stars"]
 position = Vector2( 120, 68 )
 texture = ExtResource( 2 )
 
@@ -128,11 +161,17 @@ position = Vector2( 120, 68 )
 texture = ExtResource( 4 )
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="TileMap/ParallaxBackground"]
+motion_scale = Vector2( 0.2, 0.2 )
 motion_mirroring = Vector2( 1440, 0 )
 
 [node name="Sprite" type="Sprite" parent="TileMap/ParallaxBackground/ParallaxLayer2"]
-position = Vector2( 121, 68 )
+position = Vector2( 121, 85 )
 texture = ExtResource( 6 )
+
+[node name="TileMap" type="TileMap" parent="TileMap/ParallaxBackground/ParallaxLayer2"]
+tile_set = SubResource( 6 )
+format = 1
+tile_data = PoolIntArray( 393202, 0, 0, 393205, 0, 0, 458738, 0, 0, 458791, 0, 0 )
 
 [node name="Player" type="KinematicBody2D" parent="."]
 position = Vector2( 39, 78 )
@@ -148,10 +187,14 @@ texture = ExtResource( 13 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 shape = SubResource( 1 )
 
+[node name="Camera2D" type="Camera2D" parent="Player"]
+current = true
+zoom = Vector2( 2, 2 )
+
 [node name="TileMap2" type="TileMap" parent="."]
 tile_set = SubResource( 3 )
 cell_size = Vector2( 32, 32 )
 collision_layer = 2
 collision_mask = 2
 format = 1
-tile_data = PoolIntArray( 720944, 0, 0, 917503, 0, 0, 851968, 0, 0, 851969, 0, 0, 851970, 0, 0, 851971, 0, 0, 851972, 0, 0, 851973, 0, 0, 851974, 0, 0, 851975, 0, 0, 851976, 0, 0, 851977, 0, 0, 851978, 0, 0, 851979, 0, 0, 851980, 0, 0, 851981, 0, 0, 851982, 0, 0, 1114134, 0, 0, 1245210, 0, 0, 1376286, 0, 0, 1441862, 0, 0, 1441866, 0, 0, 1441870, 0, 0, 1507362, 0, 0, 1572902, 0, 0, 1638464, 0, 0, 1638466, 0, 0, 1703978, 0, 0, 1966132, 0, 0, 1966136, 0, 0, 1966139, 0, 0, 1966141, 0, 0 )
+tile_data = PoolIntArray( 917497, 0, 0, 917500, 0, 0, 851968, 0, 0, 851971, 0, 0, 851972, 0, 0, 851973, 0, 0, 851974, 0, 0, 851975, 0, 0, 851976, 0, 0, 851977, 0, 0, 851978, 0, 0, 851979, 0, 0, 851980, 0, 0, 851981, 0, 0, 851982, 0, 0 )
