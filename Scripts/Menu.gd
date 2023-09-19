@@ -3,7 +3,7 @@ extends Control
 	 
 
 func _on_OptionsButton_pressed():
-	pass
+	get_tree().change_scene("res://Scenes/Options.tscn")
 
 
 

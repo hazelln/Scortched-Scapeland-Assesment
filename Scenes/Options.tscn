@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Scripts/Options.gd" type="Script" id=1]
+[ext_resource path="res://Themes/LuckiestGuy.tres" type="Theme" id=2]
 
 [node name="Menu" type="Control"]
 anchor_left = 0.5
@@ -23,14 +24,16 @@ margin_right = 31.5
 margin_bottom = 35.5
 
 [node name="Volume" type="Button" parent="VBoxContainer"]
-margin_right = 63.0
-margin_bottom = 20.0
+margin_right = 72.0
+margin_bottom = 23.0
+theme = ExtResource( 2 )
 text = "Volume"
 
 [node name="Back" type="Button" parent="VBoxContainer"]
-margin_top = 24.0
-margin_right = 63.0
-margin_bottom = 44.0
+margin_top = 27.0
+margin_right = 72.0
+margin_bottom = 50.0
+theme = ExtResource( 2 )
 text = "Back"
 
 [connection signal="pressed" from="VBoxContainer/Volume" to="." method="_on_Volume_pressed"]
