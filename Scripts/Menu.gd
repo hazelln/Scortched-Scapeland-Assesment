@@ -14,7 +14,7 @@ func _on_QuitButton_pressed():
 
 
 func _on_PlayButton_button_down():
-	get_tree().change_scene("res://Scenes/Game.tscn")
+	get_tree().change_scene("res://Scenes/World.tscn")
 
 
 func _on_OptionsButton_button_down():
