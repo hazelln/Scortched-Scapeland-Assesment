@@ -779,7 +779,7 @@ zoom = Vector2( 2, 2 )
 scale = Vector2( 2, 2 )
 frames = SubResource( 28 )
 animation = "jump up"
-frame = 2
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Playerr"]
