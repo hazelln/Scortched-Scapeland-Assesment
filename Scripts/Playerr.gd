@@ -5,17 +5,17 @@ var velocity = Vector2.ZERO
 var speed = 0
 onready var animation = $AnimatedSprite
 onready var sprite = $Sprite 
-#var start_position = Vector2.ZERO
+var start_position = Vector2.ZERO
 
-#func _ready():
-	#start_position = position
+func _ready():
+	start_position = position
 
 #func _process(delta):
 		 #if position.y > 480 :
 			 #position = start_position
 
-#func respwan():
-	#position = start_position
+func respwan():
+	position = start_position
 
 func _physics_process(delta):
 	# Check if the character is grounded (on the floor)
@@ -30,7 +30,7 @@ func _physics_process(delta):
 		animation.play("run")
 
 	# Calculate the horizontal velocity based on input
-	velocity.x = Input.get_action_strength("right") * 200 - Input.get_action_strength("left") * 200
+	velocity.x = Input.get_action_strength("right") * 500 - Input.get_action_strength("left") * 500
 	velocity.y += GRAVITY * delta
 	
 	if velocity.x > 0:

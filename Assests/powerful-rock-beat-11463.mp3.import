@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/powerful-rock-beat-11463.mp3-f15edd8bb749660f093e7170f5cad542.mp3str"
+
+[deps]
+
+source_file="res://Assests/powerful-rock-beat-11463.mp3"
+dest_files=[ "res://.import/powerful-rock-beat-11463.mp3-f15edd8bb749660f093e7170f5cad542.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Scripts/Game.gd" type="Script" id=1]
 [ext_resource path="res://Desert Parallax by Cryptogene/8 Stars2.png" type="Texture" id=2]
@@ -16,6 +16,8 @@
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=14]
 [ext_resource path="res://Assests/DesertTileset/png/Tile/15.png" type="Texture" id=15]
 [ext_resource path="res://Sprites/Desert Background Desert Layer 1.png" type="Texture" id=16]
+[ext_resource path="res://Assests/powerful-rock-beat-11463.mp3" type="AudioStream" id=17]
+[ext_resource path="res://Scripts/Bgmusic.gd" type="Script" id=18]
 
 [sub_resource type="TileSet" id=5]
 0/name = "Desert Background Desert Layer 1.png 0"
@@ -184,3 +186,7 @@ collision_layer = 2
 collision_mask = 2
 format = 1
 tile_data = PoolIntArray( 917497, 0, 0, 917500, 0, 0, 851968, 0, 0, 851971, 0, 0, 851972, 0, 0, 851973, 0, 0, 851974, 0, 0, 851975, 0, 0, 851976, 0, 0, 851977, 0, 0, 851978, 0, 0, 851979, 0, 0, 851980, 0, 0, 851981, 0, 0, 851982, 0, 0 )
+
+[node name="Bgmusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 17 )
+script = ExtResource( 18 )
