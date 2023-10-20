@@ -57,8 +57,11 @@ theme = ExtResource( 2 )
 text = "Quit"
 
 [node name="GameName" type="RichTextLabel" parent="Background"]
-margin_right = 190.0
-margin_bottom = 40.0
+margin_left = 338.0
+margin_top = 175.0
+margin_right = 528.0
+margin_bottom = 215.0
+rect_scale = Vector2( 2, 2 )
 theme = ExtResource( 2 )
 text = "SCORTCHED SCAPELAND"
 script = ExtResource( 4 )

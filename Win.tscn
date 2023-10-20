@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Themes/LuckiestGuy.tres" type="Theme" id=1]
+
+[node name="Win" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+margin_left = 336.0
+margin_top = 246.0
+margin_right = 406.0
+margin_bottom = 263.0
+rect_scale = Vector2( 5, 5 )
+theme = ExtResource( 1 )
+text = "YOU WON"
